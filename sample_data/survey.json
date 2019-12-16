@@ -1,0 +1,43 @@
+{
+  "configuration":{
+    "loginUrl": "https://login.salesforce.com/",
+		"username":"UN@openfn.org",
+		"password":"password1234",
+		"securityToken": "token1234"
+  },
+  "data":{
+    "__query_params": {},
+    "payload": {
+      "survey": {
+        "id": "992",
+        "questions": [
+          {
+            "answer": {
+              "answer": "Still need to check!",
+              "id": "20581",
+              "ts": "2019-12-04 10:41:27"
+            },
+            "id": "22771",
+            "instruction": "",
+            "question": "Did the points remain at 172?",
+            "type": "multi"
+          },
+          {
+            "answer": {
+              "answer": "Remains to be seen!",
+              "id": "20582",
+              "ts": "2019-12-04 10:41:31"
+            },
+            "id": "22772",
+            "instruction": "",
+            "question": "Were you able to take the course more than once?",
+            "type": "multi"
+          }
+        ],
+        "user_id": "103697015"
+      }
+    },
+    "type": "survey",
+    "unix_timestamp": 1575456091
+  }
+}

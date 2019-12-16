@@ -1,0 +1,16 @@
+{
+  "configuration":{
+    "loginUrl": "https://login.salesforce.com/",
+		"username":"UN@openfn.org",
+		"password":"password1234",
+		"securityToken": "token1234"
+  },
+  "data":{
+    "__query_params": {},
+    "payload": {
+      "user_id": "103697025"
+    },
+    "type": "session",
+    "unix_timestamp": 1576042399
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "configuration":{
+    "loginUrl": "https://login.salesforce.com/",
+		"username":"UN@openfn.org",
+		"password":"password1234",
+		"securityToken": "token1234"
+  },
+  "data":{
+    "__query_params": {},
+    "payload": {
+      "campaign_id": "359",
+      "campaign_name": "Who are you?",
+      "text": "test test",
+      "user_id": "103697015"
+    },
+    "type": "post",
+    "unix_timestamp": 1575455302
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "configuration":{
+    "loginUrl": "https://login.salesforce.com/",
+		"username":"UN@openfn.org",
+		"password":"password1234",
+		"securityToken": "token1234"
+  },
+  "data":{
+    "__query_params": {},
+    "payload": {
+      "course_link": "/learn/index/course/ref/learn-points--module-2",
+      "course_name": "Learn Points - Module 2",
+      "user_id": "103697015",
+      "user_nick": "nalibali-tester-edited"
+    },
+    "type": "LearnCourseCompleted",
+    "unix_timestamp": 1575456093
+  }
+}

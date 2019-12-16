@@ -1,0 +1,18 @@
+{
+  "configuration":{
+    "loginUrl": "https://login.salesforce.com/",
+		"username":"UN@openfn.org",
+		"password":"password1234",
+		"securityToken": "token1234"
+  },
+  "data":{
+    "__query_params": {},
+    "payload": {
+      "comment": "test comment",
+      "thread_id": "2670",
+      "user_id": "103697015"
+    },
+    "type": "comment",
+    "unix_timestamp": 1575455172
+  }
+}

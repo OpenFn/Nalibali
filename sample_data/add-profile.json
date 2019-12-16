@@ -1,0 +1,39 @@
+{
+  "configuration":{
+    "loginUrl": "https://login.salesforce.com/",
+		"username":"UN@openfn.org",
+		"password":"password1234",
+		"securityToken": "token1234"
+  },
+  "data":{
+    "__query_params": {},
+    "payload": {
+      "profile": {
+        "alias": "Sarah Miller",
+        "bio": null,
+        "city": null,
+        "country_iso": "ZA",
+        "currency_iso": null,
+        "dob": 568512000,
+        "email": null,
+        "email_valid": null,
+        "first_name": "Sarah",
+        "gender": "f",
+        "last_name": "Miller",
+        "nalibali_employee": null,
+        "nalibali_role": null,
+        "nalibali_user_status": null,
+        "origin": null,
+        "phone": null,
+        "phone_valid": null,
+        "province": null,
+        "region": null,
+        "status": null,
+        "ts": "2019-12-11 05:33:18",
+        "user_id": "103697025"
+      }
+    },
+    "type": "add-profile",
+    "unix_timestamp": 1576042434
+  }
+}
