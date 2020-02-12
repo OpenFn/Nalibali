@@ -13,7 +13,7 @@ upsert("Every1Mobile_Activity__c", "Unique_ID__c", fields(
     }),
     field("Survey_ID__c", dataValue("payload.survey.id"))
   )),
-  //for each question in survey, create 1 Every1Mobile_Activity__c
+  //for each question in survey, create 1 child Every1Mobile_Activity__c w/ self-lookup to parent above
   //path to question array: $.payload.survey.questions[*]
   each(
     dataPath("$.payload.survey.questions[*]"),

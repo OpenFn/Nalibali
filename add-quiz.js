@@ -13,7 +13,7 @@ upsert("Every1Mobile_Activity__c", "Unique_ID__c", fields(
   }),
   field("Quiz_ID__c", dataValue("payload.quiz.id"))
 )),
-//for each question in quix, create 1 Every1Mobile_Activity__c
+//for each question in quiz, create 1 Every1Mobile_Activity__c
 //path to question array: $.payload.quiz.questions[*]
 each(
   dataPath("$.payload.quiz.questions[*]"),
