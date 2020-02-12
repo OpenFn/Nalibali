@@ -13,7 +13,7 @@ upsert("Contact", "Every1Mobile_ID__c", fields(
     field("FirstName", dataValue("payload.profile.first_name")),
     field("LastName", dataValue("payload.profile.last_name")),
     field("Gender__c", (state) => {
-      var gender = state.data.payload.gender;
+      var gender = state.data.payload.profile.gender;
       if (gender === "f") {
         return "Female";
       } else if (gender === "m") {

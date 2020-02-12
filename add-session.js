@@ -5,7 +5,6 @@ upsert("Every1Mobile_Activity__c", "Unique_ID__c", fields(
     var uid = user + time;
     return uid;
   }),
-  //field("RecordTypeID", "0120N0000001XCdQAM"),
   relationship("Contact__r", "Every1Mobile_ID__c", dataValue("payload.user_id")),
   field("Type__c", "Login"),
   field("DateTime__c", (state) => {
