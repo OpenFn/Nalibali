@@ -38,7 +38,7 @@ upsert(
       'Unique_ID__c',
       fields(
         field('Unique_ID__c', state => {
-          return `${state.data.surveyId}${state.data.id}`;
+          return `${state.data.quizId}${state.data.id}`;
         }),
         relationship('Contact__r', 'Every1Mobile_ID__c', dataValue('userId')),
         field('Survey_Question_Type__c', dataValue('type')),
