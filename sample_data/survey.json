@@ -1,11 +1,11 @@
 {
-  "configuration":{
+  "configuration": {
     "loginUrl": "https://test.salesforce.com/",
-		"username":"aleksa@nbsandbox.org",
-		"password":"pwd",
-		"securityToken": "token"
+    "username": "aleksa@nbsandbox.org",
+    "password": "pwd",
+    "securityToken": "token"
   },
-  "data":{
+  "data": {
     "__query_params": {},
     "payload": {
       "survey": {
