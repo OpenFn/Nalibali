@@ -46,7 +46,7 @@ each(
       field('Survey_Question_Type__c', dataValue('type')),
       field('Survey_Questions_ID__c', dataValue('id')),
       field('Survey_Questions_Question__c', dataValue('question')),
-      field('Survey_Answer_ID__c', dataValue('answer.id')),
+      field('Surveey_Questions_Answer_ID__c', dataValue('answer.id')),
       field('Survey_Questions_Answer__c', dataValue('answer.answer')),
       relationship(
         'Every1Mobile_Activity__r',
