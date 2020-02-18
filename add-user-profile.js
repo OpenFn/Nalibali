@@ -22,8 +22,13 @@ upsert("Contact", "Every1Mobile_ID__c", fields(
         return null;
       }
     }),
-    field("Is_Nal_ibali_staff_member__c", dataValue("payload.profile.nalibali_employee")),
-    field("Nal_ibali_Role__c", dataValue("payload.profile.nalibali_role")),
+    //field("Is_Nal_ibali_staff_member__c", dataValue("payload.profile.nalibali_employee")), //do not map, formula field
+    field("Nal_ibali_Role__c", (state) => {
+      var role = dataValue("payload.profile.nalibali_role")(state);
+      var newRole = (role || role!==null ? role : "");
+      var staff = dataValue("payload.profile.nalibali_employee")(state);
+      return (staff==="yes" || staff===true ? "Staff" : newRole);
+    }),
     field("Phone", dataValue("payload.profile.phone")),
     field("Province__c", dataValue("payload.profile.province")),
     field("Date_of_E1M_Signup__c", (state) => {
