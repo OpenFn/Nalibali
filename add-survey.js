@@ -39,7 +39,8 @@ each(
     'Unique_ID__c',
     fields(
       field('Unique_ID__c', state => {
-        return `${state.data.surveyId}${state.data.id}`;
+        var questionId = dataValue('id')(state) //adding questionId to each question Unique_ID__c
+        return `${state.data.surveyId}${state.data.id}${questionId}`;
       }),
       relationship('Contact__r', 'Every1Mobile_ID__c', dataValue('userId')),
       field('Survey_Question_Type__c', dataValue('type')),
