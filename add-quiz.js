@@ -43,9 +43,9 @@ upsert(
         relationship('Contact__r', 'Every1Mobile_ID__c', dataValue('userId')),
         field('Survey_Question_Type__c', dataValue('type')),
         field('Survey_Questions_ID__c', dataValue('id')),
-        field('Survey_Questions_Question__c', dataValue('question')),
-        field('Survey_Answer_ID__c', dataValue('answer.id')),
-        field('Survey_Questions_Answer__c', dataValue('answer.answer')),
+        field('Questions_Question__c', dataValue('question')),
+        field('Questions_Answer_ID__c', dataValue('answer.id')),
+        field('Questions_Answer__c', dataValue('answer.answer')),
         relationship(
           'Every1Mobile_Activity__r',
           'Unique_ID__c',
