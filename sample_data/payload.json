@@ -1,0 +1,12 @@
+{
+    "__query_params": {},
+    "dataType" : "E1M Activity",
+    "payload": {
+      "event_type": "SurveyCompleted",
+      "score": "199",
+      "title": "Read Everyday",
+      "user_id": "103697015"
+    },
+    "type": "activity",
+    "unix_timestamp": 1575455212
+  }
