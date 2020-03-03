@@ -1,6 +1,6 @@
-combine(function(state){
+combine(function(state) {
   //Logic when type = activity
-  if(dataValue("type")(state)=="activity"){
+  if (dataValue("type")(state) == "activity") {
     upsert("Every1Mobile_Activity__c", "Unique_ID__c", fields(
       field("Unique_ID__c", (state) => {
         var user = state.data.payload.user_id;
@@ -20,7 +20,7 @@ combine(function(state){
     ))(state)
   }
   //Logic when type = session
-  else if(dataValue("type")(state)=="session"){
+  else if (dataValue("type")(state) == "session") {
     upsert("Every1Mobile_Activity__c", "Unique_ID__c", fields(
       field("Unique_ID__c", (state) => {
         var user = state.data.payload.user_id;
@@ -36,7 +36,7 @@ combine(function(state){
     ))(state)
   }
   //Logic when type = comment
-  else if(dataValue("type")(state)=="comment"){
+  else if (dataValue("type")(state) == "comment") {
     upsert("Every1Mobile_Activity__c", "Unique_ID__c", fields(
       field("Unique_ID__c", (state) => {
         var user = state.data.payload.user_id;
@@ -51,8 +51,27 @@ combine(function(state){
       })
     ))(state)
   }
+  //Logic when type = LearnCourseCompleted
+  else if (dataValue("type")(state) == "LearnCourseCompleted") {
+    upsert("Every1Mobile_Activity__c", "Unique_ID__c", fields(
+      field("Unique_ID__c", (state) => {
+        var user = state.data.payload.user_id;
+        var time = state.data.unix_timestamp;
+        var uid = user + time;
+        return uid;
+      }),
+      field("RecordTypeID", "0120N0000001XCxQAM"),
+      relationship("Contact__r", "Every1Mobile_ID__c", dataValue("payload.user_id")),
+      field("Type__c", dataValue("type")),
+      field("DateTime__c", (state) => {
+        return new Date(state.data.unix_timestamp * 1000);
+      }),
+      field("Course_Link__c", dataValue("payload.course_link")),
+      field("Course_Name__c", dataValue("payload.course_name"))
+    ))(state)
+  }
   //Logic when type = post
-  else if(dataValue("type")(state)=="post"){
+  else if (dataValue("type")(state) == "post") {
     upsert("Every1Mobile_Activity__c", "Unique_ID__c", fields(
       field("Unique_ID__c", (state) => {
         var user = state.data.payload.user_id;
