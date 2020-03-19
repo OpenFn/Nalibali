@@ -46,6 +46,7 @@ combine(function(state) {
       }),
       relationship("Contact__r", "Every1Mobile_ID__c", dataValue("payload.user_id")),
       field("Type__c", dataValue("type")),
+      field("Content__c", dataValue("payload.comment")),
       field("DateTime__c", (state) => {
         return new Date(state.data.unix_timestamp * 1000);
       })
