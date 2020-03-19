@@ -11,7 +11,10 @@ upsert("Contact", "Every1Mobile_ID__c", fields(
     }),
     field("Email", dataValue("payload.profile.email")),
     field("FirstName", dataValue("payload.profile.first_name")),
-    field("LastName", dataValue("payload.profile.last_name")),
+    field("LastName", (state) => {
+      var name =  dataValue("payload.profile.last_name")(state);
+      return (name===null || name===undefined || name==='' ? "Unknown" : name);
+    }),
     field("Gender__c", (state) => {
       var gender = state.data.payload.profile.gender;
       if (gender === "f") {
