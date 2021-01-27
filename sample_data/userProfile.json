@@ -1,0 +1,28 @@
+{
+  "__query_params": {},
+  "payload": {
+    "profile": {
+      "alias": "Aleksa Krolls",
+      "bio": null,
+      "city": null,
+      "country_iso": "ZA",
+      "currency_iso": null,
+      "dob": 686790111,
+      "email": "aleksa@gmail.com",
+      "email_valid": "0",
+      "first_name": "Krolls",
+      "gender": "g",
+      "last_name": "Aleksa",
+      "nalibali_employee": null,
+      "nalibali_role": null,
+      "nalibali_user_status": null,
+      "origin": null,
+      "phone": "+27817890007",
+      "phone_valid": "0",
+      "province": null,
+      "region": null,
+      "status": null,
+      "ts": "2021-01-27 07:01:59",
+      "user_id": "10428081"
+    }
+  },
